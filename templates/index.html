@@ -2,9 +2,20 @@
 <html>
 <head>
     <title>Commit Lens</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>    
 <body>
-    <h1>Commit Lens</h1>
-    <p>starting basic setup</p>
+
+     <h1>Commit Lens</h1>
+
+     <div>
+        <input type="text" id="repoPath" placeholder="Enter local repo path">
+        <button onclick="analyzeRepo()">Analyze</button>
+     </div>
+
+     <div id="result"></div>
+
+     <script src="/static/js/main.js"></script>
+     
 </body>
 </html>
