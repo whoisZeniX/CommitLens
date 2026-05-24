@@ -11,6 +11,8 @@ async function analyzeRepo() {
 
     const data = await response.json();
 
-    document.getElementById("result").innerHTML = 
-        `<p>${data.message}</p>`;
+    document.getElementById("result").innerHTML = `
+        <p>${data.message}</p>
+        <p>Total commits: ${data.total_commits || 0}</p>
+    `;    
 }
