@@ -14,5 +14,7 @@ async function analyzeRepo() {
     document.getElementById("result").innerHTML = `
         <p>${data.message}</p>
         <p>Total commits: ${data.total_commits || 0}</p>
-    `;    
+        <p>Average files changed: ${data.avg_files_changed || 0}</p>
+        <p>Large commits: ${data.large_commits || 0}</p>
+    `;
 }
