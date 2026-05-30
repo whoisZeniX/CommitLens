@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis History</title>
+</head>   
+<body>
+
+    <h1>Previous Analyses</h1>
+
+    {% for analysis in analyses %}
+
+        <div>
+            <p><strong>Repository:</strong> {{ analysis.repo_name }}</p>
+            <p><strong>Total Commits:</strong> {{ analysis.total_commits }}</p>
+            <p><strong>Average Files Changed:</strong> {{ analysis.avg_files_changed }}</p>
+            <p><strong>Large Commits:</strong> {{ analysis.large_commits }}</p>
+            <hr>
+        </div>
+
+    {% endfor %}
+        
+</body> 
+</html>
