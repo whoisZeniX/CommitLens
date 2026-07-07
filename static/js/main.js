@@ -1,5 +1,5 @@
 async function analyzeRepo() {
-    const repoPath = document.getElementById("repoPath").ariaValueMax;
+    const repoPath = document.getElementById("repoPath").value;
 
     const response = await fetch("/analyze", {
         method: "POST",

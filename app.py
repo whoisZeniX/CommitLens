@@ -46,7 +46,7 @@ def analyze():
         for commit in commits:
             file_changes.append(len(commit.stats.files))
 
-        avg_files_changes = 0
+        avg_files_changed = 0
 
         if len(file_changes) > 0:
             avg_files_changed = sum(file_changes) / len(file_changes)
@@ -70,7 +70,7 @@ def analyze():
             "large_commits": large_commits
         })
     
-    except:
+    except Exception:
         return jsonify({
             "message": "not a valid git repository"
         })
